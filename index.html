@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html,body{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	#content{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		perspective:800px;
+	}
+	/* 下标为0的页面样式开始 */
+	#part1{
+		width: 100%;
+		height: 100%;
+		/* background: red; */
+		position: relative;
+	}
+	#cup1{
+		width: 79px;
+		height: 150px;
+		background: url(img/part1.png) no-repeat  -756px 0px;
+		position: absolute;
+		top:200px ;
+		right:80px;
+		opacity: 0;
+	}
+	#cup2{
+		width: 60px;
+		height: 65px;
+		background: url(img/part1.png) no-repeat  -756px -150px;
+		position: absolute;
+		top:300px ;
+		right:220px;
+		opacity: 0;
+	}
+	#taideng{
+		background: url(img/part1.png) no-repeat -455px 0px;
+		position: relative;
+		width: 300px;
+		height: 380px;
+		top: 150px;
+		left: 50px;
+		opacity: 0;
+	}
+	#pingmu{
+		width: 450px;
+		height: 380px;
+		position: absolute;
+		top: 150px;
+		left: 50%;
+		margin-left: -225px;
+		background: url(img/part1.png) no-repeat ;
+		opacity: 0;
+		transform:scale(.8);
+		transition:all 1s linear 0s;
+	}
+	#pingmu.big{
+		transform:scale(1);
+		opacity: 1;
+	}
+	/* 下标为0的页面样式结束 */
+	/* 下标为1的页面样式开始 */
+	#part2{
+		width: 100%;
+		height: 100%;
+		/*background: green;*/
+		position: relative;
+	}
+	#leaf_small{
+		width: 90px;
+		height: 65px;
+		background: url(img/page.png) no-repeat 0 -150px ;
+		position: absolute;
+		top: -65px;
+		left: 30%;
+		opacity: 0;
+		transition:all 1s linear 0s;/* 过度 */
+	}
+	#leaf_small.come{
+		top:100px;
+		left: 50px;
+		opacity: 0;
+		animation: leaf_small_animate 6s linear infinite;
+	}
+	@keyframes leaf_small_animate{
+		/* 0%{
+			top:100px;
+			left: 240px;
+			opacity: .3;
+		}
+		20%{
+			top:180px;
+			left: 300px;
+			opacity: .6;
+		}
+		50%{
+			top:350px;
+			left: 380px;
+			opacity: .8;
+		}
+		70%{
+			top:400px;
+			left: 320px;
+			opacity: .5;
+		}
+		100%{
+			top:600px;
+			left: 280px;
+			opacity: 0;
+		} */
+		0% {
+		    transform: rotateZ(-10deg) translateX(0) translateY(-250px);
+		    opacity: 0;
+		}
+		30% {
+		    transform: rotateZ(10deg) translateX(180px) translateY(-50px);
+		    opacity: 0.8;
+		}
+		60% {
+		    transform: rotateZ(30deg) translateX(380px) translateY(150px);
+   			opacity: 0;
+		}
+		100% {
+		    transform: rotateZ(30deg) translateX(380px) translateY(150px);
+    		opacity: 0;
+		}
+		
+	}
+	#leaf_big{
+		width: 240px;
+		height: 150px;
+		background: url(img/page.png) no-repeat 0 0 ;
+		position: absolute;
+		top: 100%;
+		left: 60%;
+		opacity: 0;
+		transition:all 1s linear 0s;/* 过度 */
+	}
+	#leaf_big.come{
+		top:240px;
+		left: 240px;
+		opacity: 1;
+	}
+	#part2_text{
+		width: 502px;
+		height: 92px;
+		position: absolute;
+		top: 100%;
+		left: 100%;
+		transition:all 1s linear 0s;
+		background: url(img/text.png) no-repeat ;
+	}
+	#part2_text.come{
+		top: 50%;
+		left: 50%;
+	}
+	/* 下标为1的页面样式结束 */
+	/* 下标为2的页面样式开始 */
+	#part3{
+		width: 100%;
+		height: 100%;
+		/*background: blue;*/
+		position: relative;
+	}
+	#part3_text{
+		background: url(img/text.png) no-repeat -273px -94px;
+		width: 229px;
+		height: 120px;
+		position: absolute;
+		top: 300px;
+		left: 150px;
+		opacity: 0;
+		transform:rotateY(360deg) translateZ(700px);
+		transition:all .5s linear 0s;
+	}
+	#part3_text.come{
+		/*left: 150px;*/
+		opacity: 1;
+		transform:rotateY(0deg) translateZ(0);
+	}
+	#rocket{
+		background: url(img/page.png) no-repeat -240px 0;
+		width: 250px;
+		height: 220px;
+		position: absolute;
+		top: 100%;
+		right: 60%;
+	}
+	#line1{
+		background: url(img/page.png) no-repeat -162px -150px;
+		width: 78px;
+		height: 80px;
+		position: absolute;
+		top: 0px;
+		right: 200px;
+		opacity: 0;
+		animation: line1_animation .5s linear 0s Infinite;
+	}
+	#line1.come{
+		opacity: 1;
+	}
+	@keyframes line1_animation{
+		from{
+			top: 0px;
+			right: 200px;
+		}
+		to{
+			top: 400px;
+			right: 600px;
+		}
+	}
+	#line2{
+		background: url(img/page.png) no-repeat -240px -220px;
+		width: 120px;
+		height: 120px;
+		position: absolute;
+		top: 0px;
+		right: 300px;
+		opacity: 0;
+		animation: line2_animation .2s linear 0s Infinite;
+		}
+	#line2.come{
+		opacity: 1;
+	}
+	@keyframes line2_animation{
+		from{
+			top:0px;
+			right: 300px;
+		}
+		to{
+			top:400px;
+			right: 700px;
+		}
+	}
+	#line3{
+		background: url(img/page.png) no-repeat -400px -220px;
+		width: 93px;
+		height: 91px;
+		position: absolute;
+		top: 70px;
+		right: 0px;
+		opacity: 0;
+		animation: line3_animation .6s linear 0s Infinite;
+	}
+	#line3.come{
+		opacity: 1
+	}
+	@keyframes line3_animation {
+		from{
+			top: 70px;
+			right: 0px;
+		}
+		to{
+			top: 470px;
+			right: 400px;
+		}
+	}
+	#line4{
+		background: url(img/page.png) no-repeat -240px -373px;
+		width: 150px;
+		height: 150px;
+		position: absolute;
+		top: 130px;
+		right: 0;
+		opacity: 0;
+		transition:all 1s ease 0s ;
+	}
+	#line4.come{
+		opacity: 1;
+		animation: line4_animation .4s linear 1s Infinite;
+	}
+	@keyframes line4_animation {
+		from{
+		top: 130px;
+		right: 0;
+		}
+		to{
+		top:530px;
+		right: 400px; 
+		}
+	}
+	/* 下标为2的页面样式结束 */
+	/* 下标为3的页面样式开始 */
+	#part4{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		/*background: yellow;*/
+	}
+	#part4_text{
+		background: url(img/text.png) no-repeat -271px -213px;
+		width: 199px;
+		height: 119px;
+		position: absolute;
+		top: 50%;
+		right: 30%;
+		opacity: 0;
+		transform:rotateY(-90deg);
+		transition:all .5s linear 0s;
+	}
+	#part4_text.come{
+		opacity: 1;
+		transform:rotateY(0deg);
+	}
+	#label{
+		background: url(img/page.png) no-repeat -239px -526px;
+		width: 234px;
+		height: 234px;
+		position: absolute;
+		top: 35%;
+		right: 65%;
+		opacity: 0;
+		transition:all 1s linear 0s ;
+		/*animation: line1_animation .5s linear 0s Infinite;*/
+	}
+	#label.come{
+		opacity: 1;
+		animation: go_top 1s ease-in-out alternate infinite;
+		-webkit-animation: go_top 1s ease-in-out alternate infinite;
+		-moz-animation: go_top 1s ease-in-out alternate infinite;
+	}
+	#shadow{
+		background: url(img/page.png) no-repeat -239px -760px;
+		width: 217px;
+		height: 28px;
+		margin-top: 160px;
+		position: absolute;
+		top: 50%;
+		right: 67%;
+		opacity: 0;
+		transition:all 1s linear 0s ;
+	}
+	#shadow.come{
+		opacity: 1;
+		animation: go_top 1s ease-in-out alternate infinite;
+		-webkit-animation: go_top 1s ease-in-out alternate infinite;
+		-moz-animation: go_top 1s ease-in-out alternate infinite;
+	}
+	@-webkit-keyframes go_top{
+		 0%{ -webkit-transform: translateY(0px);}
+   		 100%{ -webkit-transform: translateY(-30px);}
+	}
+	@-moz-keyframes go_top{
+		 0%{ -moz-transform: translateY(0px);}
+   		 100%{ -moz-transform: translateY(-30px);}
+	}
+	/* 下标为3的页面样式结束 */
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div id="part1">
+			<div id="cup1"></div>
+			<div id="cup2"></div>
+			<div id="pingmu"></div>
+			<div id="taideng"></div>
+		</div>
+		<div id="part2">
+			<div id="leaf_small"></div>
+			<div id="leaf_big"></div>
+			<div id="part2_text"></div>
+		</div>
+		<div id="part3">
+			<div id="part3_text"></div>
+			<div id="rocket"></div>
+			<div id="line1"></div>
+			<div id="line2"></div>
+			<div id="line3"></div>
+			<div id="line4"></div>
+		</div>
+		<div id="part4">
+			<div id="part4_text"></div>
+			<div id="label"></div>
+			<div id="shadow"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/animate_1.0.1.js"></script>
+	<script type="text/javascript">
+	//设置信号量
+	var index = 0;
+	var timeout = null;//控制滚轮事件
+	var timer = null;//控制火箭左右摇摆
+	var content = document.getElementById('content');
+	//下标为0的屏幕入场
+	//获取part1的元素
+	var cup1 = document.getElementById('cup1');
+	var cup2 = document.getElementById('cup2');
+	var taideng = document.getElementById('taideng');
+	var pingmu = document.getElementById('pingmu');
+	//入场
+	animate(cup1,{"top":280,"opacity":1},800);
+	animate(cup2,{"top":400,"opacity":1},1000);
+	animate(taideng,{"left":180,"opacity":1},1000);
+	pingmu.className = "big";
+
+	//获取part2的元素
+	var leaf_small = document.getElementById('leaf_small');
+	var leaf_big = document.getElementById('leaf_big');
+	var part2_text = document.getElementById('part2_text');
+
+	//获取part3的元素
+	var part3_text = document.getElementById('part3_text');
+	var rocket = document.getElementById('rocket');
+	var line1 = document.getElementById('line1');
+	var line2 = document.getElementById('line2');
+	var line3 = document.getElementById('line3');
+	var line4 = document.getElementById('line4');
+
+	//获取part4的元素
+	var part4_text = document.getElementById('part4_text');
+	var label = document.getElementById('label');
+	document.body.onmousewheel = function(e){
+		var height = document.documentElement.clientHeight;
+		//进行判断鼠标滚动的方向 计算滑动到哪个屏幕了
+		//先清空，再执行
+		clearTimeout(timeout);
+		
+		timeout = setTimeout(function(){
+			if(e.wheelDelta < 0){
+				//信号量增加
+				index++;
+				if(index == 4){
+					index = 0;
+				}
+				//滚轮下滚index取值0、1、2、3
+				if(index == 0){//下标为3的淡出，下标为0的淡入
+					//下标3的元素淡出
+					part4_text.className = "";
+					label.className = "";
+					shadow.className = "";
+					//1s后切换屏幕
+					setTimeout(function(){
+						animate(content,{"top":-index * height},500,function(){
+							//切换屏幕后，下标为0的淡入
+							animate(cup1,{"top":280,"opacity":1},800);
+							animate(cup2,{"top":400,"opacity":1},1000);
+							animate(taideng,{"left":180,"opacity":1},1000);
+							pingmu.className = "big";
+						});
+					}, 1000);
+				}else if(index == 1){//下标为0的淡出，下标为1的淡入
+					//下标为0的淡出,当part1的所有元素淡出后，下标为1的屏幕滚入
+					animate(cup1,{"top":200,"opacity":0},800);
+					animate(cup2,{"top":300,"opacity":0},1000);
+					animate(taideng,{"left":50,"opacity":0},1000,function(){
+						//下标为1的屏幕滚入
+						//console.log(-index * height);
+						animate(content,{"top":-index * height},500,function(){
+							//下标为1的屏幕滚入后，下标为1的元素淡入
+							leaf_small.className = "come";
+							leaf_big.className = "come";
+							part2_text.className = "come";
+						});
+					});
+					pingmu.className = "";
+
+
+				}else if(index == 2){//下标为1的淡出，下标为2的淡入
+					//下标为1的淡出
+					leaf_small.className = "";
+					leaf_big.className = "";
+					part2_text.className = "";
+					//1s之后下标为1的淡出，下标为2的屏幕滚入
+					setTimeout(function(){
+						animate(content,{"top":-index * height},500,function(){
+							//下标为2的屏幕滚入后，下标为2的元素淡入
+							part3_text.className = "come";
+							line1.className = "come";
+							line2.className = "come";
+							line3.className = "come";
+							line4.className = "come";
+							var change = 10;
+							//设置火箭的初始位置
+							rocket.style.top = "100%";
+							rocket.style.right = "60%";
+							animate(rocket,{"top":190,"right":230},1000,function(){
+								clearInterval(timer);
+								timer = setInterval(function(){
+									//使火箭左右摆动
+									var o = 5 * Math.random() - change;
+									rocket.style.top = 190 + o +"px";
+									rocket.style.right = 230 - o +"px";
+								}, 60);
+							});
+						});
+					},1000);
+
+				}else{//下标为2的淡出，下标为3的淡入
+					//下标为2的淡出
+					part3_text.className = "";
+					line1.className = "";
+					line2.className = "";
+					line3.className = "";
+					line4.className = "";
+					clearInterval(timer);//清除火箭左右摆动动画
+					animate(rocket,{"top":-250,"right":-280}, 1000,function(){
+						//1s之后下标为2的淡出，下标为3的屏幕滚入
+						animate(content,{"top":-index * height},500,function(){
+							//下标为3的元素淡入
+							part4_text.className = "come";
+							label.className = "come";
+							shadow.className = "come";
+						});
+					})
+				}
+			}else{
+				//信号量减小
+				index--;
+				if(index == -1){
+					index = 3;
+				}
+				//滚轮上滚index取值0、1、2、3
+				if(index == 3){//下标为0的淡出，下标为3的淡入
+					animate(cup1,{"top":200,"opacity":0},800);
+					animate(cup2,{"top":300,"opacity":0},1000);
+					animate(taideng,{"left":50,"opacity":0},1000,function(){
+						//下标为3的屏幕滚入
+						//console.log(-index * height);
+						animate(content,{"top":-index * height},500,function(){
+							//火箭的位置有问题，先隐藏，载复原
+							rocket.style.opacity = "0";
+							//下标为1的屏幕滚入后，下标为3的元素淡入
+							part4_text.className = "come";
+							label.className = "come";
+							shadow.className = "come";
+						});
+					});
+					pingmu.className = "";
+				}else if(index == 2){//下标为3的淡出，下标为2的淡入
+					//下标3的元素淡出
+					part4_text.className = "";
+					label.className = "";
+					shadow.className = "";
+					//1s后切换屏幕
+					setTimeout(function(){
+						animate(content,{"top":-index * height},500,function(){
+							//切换屏幕后，下标为2的淡入
+							rocket.style.opacity = "1";
+							part3_text.className = "come";
+							line1.className = "come";
+							line2.className = "come";
+							line3.className = "come";
+							line4.className = "come";
+							//设置火箭的初始位置
+							rocket.style.top = "100%";
+							rocket.style.right = "60%";
+							var change = 10;
+							animate(rocket,{"top":190,"right":230},1000,function(){
+								clearInterval(timer);
+								timer = setInterval(function(){
+									//使火箭左右摆动
+									var o = 5 * Math.random() - change;
+									rocket.style.top = 190 + o +"px";
+									rocket.style.right = 230 - o +"px";
+								}, 60);
+							});
+						});
+					}, 1000);
+					
+				}else if(index == 1){//下标为2的淡出，下标为1的淡入
+					part3_text.className = "";
+					line1.className = "";
+					line2.className = "";
+					line3.className = "";
+					line4.className = "";
+					clearInterval(timer);
+					animate(rocket,{"top":-250,"right":-280},1000,function(){
+						//下标为1的屏幕入场，元素淡入
+						animate(content,{"top":-height*index},500,function(){
+							//元素淡入
+							leaf_small.className = "come";
+							leaf_big.className = "come";
+							part2_text.className = "come";
+						});
+					});
+
+				}else{//下标为1的淡出，下标为0的淡入
+					leaf_small.className = "";
+					leaf_big.className = "";
+					part2_text.className = "";
+					//1s之后，下标为0的屏幕入场
+					setTimeout(function(){
+						animate(content,{"top":-height*index},500,function(){
+							//下标为0的元素入场
+							animate(cup1,{"top":280,"opacity":1},800);
+							animate(cup2,{"top":400,"opacity":1},1000);
+							animate(taideng,{"left":180,"opacity":1},1000);
+							pingmu.className = "big";
+						});
+					}, 1000);
+
+				}
+			}
+			console.log(index);
+			// animate(content,{"top":-height*index},300);
+		}, 500);
+	}
+	</script>
+</body>
+</html>
