@@ -1,0 +1,83 @@
+{
+	"errno": 0,
+	"data": {
+		"mostFavo":{
+				"title": "最优惠",
+				"src":"images/youhui.png",
+				"description": "最优惠商品",
+				"id": "1",
+				"imglist": ["images/korea/miao2.png","images/korea/miao3.png","images/korea/miao1.jpg"]
+				},
+		"worthBuy":{
+				"title": "值得买",
+				"src":"images/buy.png",
+				"description": "值得买商品",
+				"id": "2",
+				"imglist": ["images/li1.jpg","images/li2.jpg"]
+				},
+		"topic":{
+				"title": "热门主题",
+				"src":"images/topic.png",
+				"description": "热门主题商品",
+				"id": "3"
+			},
+		"items": [
+			{
+				"title": "男鞋",
+				"description": "走出自己的风格",
+				"id": "1",
+				"href":"",
+				"src": "images/hot_theme/u176.png"
+			},
+			{
+				"title": "男装",
+				"description": "不一样的男人气质",
+				"id": "2",
+				"href":"",
+				"src": "images/hot_theme/u170.png"
+			},
+			{
+				"title": "数码广场",
+				"description": "玩转3C产品",
+				"id": "3",
+				"href":"",
+				"src": "images/hot_theme/u172.png"
+			},
+			{
+				"title": "女装",
+				"description": "女人的衣服总是少了那么一件",
+				"id": "4",
+				"href":"",
+				"src": "images/hot_theme/u168.png"
+			},
+			{
+				"title": "女鞋",
+				"description": "带你走在时尚的前端",
+				"id": "5",
+				"href":"",
+				"src": "images/hot_theme/u166.png"
+			},
+			{
+				"title": "家居",
+				"description": "乐享生活",
+				"id": "6",
+				"href":"",
+				"src": "images/hot_theme/u162.jpg"
+			},
+			{
+				"title": "美食城",
+				"description": "天下美食大搜罗",
+				"id": "7",
+				"href":"",
+				"src": "images/hot_theme/u174.png"
+			},
+			{
+				"title": "美妆",
+				"description": "与美丽有个秘密约会",
+				"id": "8",
+				"href":"",
+				"src": "images/hot_theme/u164.png"
+			}
+		]
+	}
+}

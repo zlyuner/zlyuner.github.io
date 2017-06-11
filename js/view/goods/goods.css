@@ -1,0 +1,18 @@
+/*单类别商品列表分类start*/
+.clear-fix:after,.clear-fix:before,.cf:after,.cf:before{content:"";display:table;}
+.clear-fix:after,.cf:after{clear:both;}
+.clear-fix,.cf{*zoom:1;}
+.b5mConLis li{width: 50%;float: left;box-shadow:inset -1px -1px 0px #e0e0e0;-webkit-box-shadow:inset -1px -1px 0px #e0e0e0;}
+.b5mConLis .img img{}
+.b5mConLis .img{overflow: hidden;min-height: 116px;}
+.b5mConLis a{display: block;margin: 18px;color: #333333;}
+.b5mConLis li:nth-child(even){box-shadow:inset 0px -1px 0px #e0e0e0;}
+.b5mConLis img{width: 100%;display: block;}
+.b5mConLis h3{padding: 5px 0 5px 0 ;display: block;height: 28px;word-wrap:break-word;word-break:break-all;}
+.b5mConLis section{}
+.b5mConLis .new {font-size: 10px;color: #999999;height:18px;overflow:hidden;word-wrap:break-word;word-break:break-all;}
+.b5mConLis .new em{color: #fe0000;font-size: 16px;}
+.b5mConLis .new .btn{background: #ff745a;border-radius: 3px;color: #fff;font-size: 10px;display: inline-block;padding: 1px 2px 1px 2px;}
+.b5mConLis .new ,.b5mConLis .old {box-ordinal-group:2;moz-box-ordinal-group:2;-webkit-box-ordinal-group:2;}
+.b5mConLis .old {color: #999999;font-size: 10px;}
+/*单类别商品列表分类end*/

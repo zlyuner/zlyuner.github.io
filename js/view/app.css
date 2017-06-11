@@ -1,0 +1,68 @@
+/*顶部导航菜单start*/
+body{padding-top:50px;}
+.topBar{
+       position:fixed;
+       top:0;
+       left:0;
+       z-index:1000;
+       width:100%;
+       height: 50px;
+       overflow:hidden;
+       zoom:1;
+       color: #fff;
+       text-align: center;
+       background: #CC3333;
+       border-bottom: 1px solid #e7e7e7;
+}
+.topBar h1{font-size: 20px;line-height: 45px;margin: 0 60px;}
+.topBar .intro{position: absolute;width:50px;color: #fff;height: 50px;}
+.topBar .left{left: 0;top: 0px;}
+.topBar .right{right: 0;top: 0px;}
+.topBar .right a{
+       height: 50px;
+       width: 50px;
+       text-align: center;
+}
+.topBar .right a img {
+    padding: 8px 0;
+    width: 34px;
+    height: 34px;
+}
+.topBar .search{border: 0;line-height: 30px;border-radius: 20px;width: 100%;overflow: hidden;outline:none;background: #EFEDED;text-indent: 2em;color:#666;}
+.topBar .sIcon{background:#fff url(../../images/icon.png) -190px -6px no-repeat;}
+.topBar .search:focus{background: #fff;}
+/*顶部导航菜单end*/
+
+/*首页类别导航start*/
+.menu {-webkit-column-gap: 0px;-moz-column-gap: 0px;column-gap: 0px;-webkit-column-count: 4;-moz-column-count: 4;column-count: 4;text-align: center;border-bottom: 1px solid #eeeeee;padding: 0 0 14px 0;}
+.menu li:hover a{border: 1px solid #f97d0e;background: #fff3e9;}
+.menu a{border: 1px solid #e2e2e2;line-height: 27px;width:50px;text-align:center;height: 27px;display: inline-block;padding: 0 10px 0 10px;border-radius: 27px;margin: 14px 0 0 0;color: #666666;}
+/*首页类别导航end*/
+/*去购买start*/
+.go-bug a{display:block;margin:10px 22px 30px;cursor:pointer;height:45px;text-align:center;background:#fb7200;font:22px/45px Microsoft YaHei;color:#fff;}
+/*去购买end*/
+
+/* 返回顶部样式开始 */
+#app .go-top{
+  font-size: 14px;
+  width: 30px;
+  padding: 8px;
+  text-align: center;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+}
+#app .copy p{
+  padding: 10px 0px;
+  text-align: center;
+}
+#app .copy p a{
+  color: #333;
+  font-size: 18px;
+}
+#app .copy p a:hover{
+  color: #CC3333;
+}
+/* 返回顶部样式结束 */

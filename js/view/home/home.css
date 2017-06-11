@@ -1,0 +1,60 @@
+/* 最优惠开始 */
+.content .tit{background: #fafafa;border-bottom: 1px solid #eeeff0;height: 41px;line-height: 41px;font-size: 20px;font-weight: normal;}
+.content .tit img{width: 25px;vertical-align: middle;margin: -4px 5px 0 5px;}
+.content .tit .icSale{background-position:-146px -8px;}
+.content .tit .icTuan{background-position:-75px -8px;}
+.content .tit .icHot{background-position:-110px -8px;}
+.content .sec a{
+       display: inline-block;
+       border:solid #eeeff0;
+       border-width: 0px 1px 1px 0px;
+       float: left;
+       height: 104px;
+       width: 100%;
+}
+.content .sec img{
+       width: 100%;
+       display: block;
+}
+.content .conBuy{
+       -webkit-column-gap: 0px;
+       -moz-column-gap: 0px;
+       column-gap: 0px;
+       -webkit-column-count: 2;
+       -moz-column-count: 2;
+       column-count: 2;
+       height: 210px;
+       overflow: hidden;
+}
+.content .conBuy a:nth-child(3){
+       height: 209px;
+       border-left: 1px solid #eeeff0;
+}
+.content .conSale a{
+       display: inline-block;
+       width: 50%;border: 0;
+}
+.content .conSale a img{width: 100%;border: 1px solid #eeeff0;border-width: 0 0 1px 0;}
+.content .conTuan a{float: left;width: 50%;border: 0;border-bottom: 1px solid #eeeff0;}
+.content .conTuan a:nth-child(1){border-right: 1px solid #eeeff0;}
+/* 最优惠结束 */
+/* 热门主题开始 */
+.content .icHot li{float: left;width: 50%;border-bottom:1px solid #eeeff0;padding-bottom: 10px;}
+.content .icHot a {min-height: 70px;margin: 7px 7px 0 7px;border:0;color: #333333;width: auto;display: block;float: none;}
+.content .icHot a h4{margin: 7px 0 0 0;font-size: 16px;}
+.content .icHot a p{color: #9c9c9c;padding: 7px 0 0 0;}
+.content .icHot a img{width: 70px;height: 70px;float: left;margin: 0 7px 0 0;display: block;}
+/* 热门主题结束 */
+
+
+/* ------------- Retina ------------- */
+@media only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (min--moz-device-pixel-ratio: 2),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 240dpi),
+       only screen and (min-resolution: 2dppx){
+.nav a img,.topBar .logo,.topBar .arrow{background-image: url(icon_402x.png);background-size: 231px 147px;}
+       
+}
+/*首页导航end*/

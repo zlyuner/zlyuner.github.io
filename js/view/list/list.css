@@ -1,0 +1,15 @@
+/*列表页样式start*/
+.infoLis li{height: 159px;}
+.infoLis a{color: #333333;}
+.infoLis div.img img{width: 100%;height: 100%;}
+.infoLis div.img{float: left;border:1px solid #e7e7e7;margin: 10px 10px 0 10px;width: 98px;height: 98px;}
+.infoLis h2 .d{font-weight: normal;font-size: 10px;color: #989898;}
+.infoLis h2 .r{color: #989898;font-size: 12px;font-weight: normal;}
+.infoLis h2{color: #ed0000;border-bottom: 1px solid #e0e0e0;margin: 10px 10px 0 120px;padding-bottom:5px;font-size: 14px;}
+.infoLis p{height: 75px;padding:5px 10px 0 0;overflow: hidden;line-height: 18px;}
+.infoLis h1{height: 40px;background: #f3f3f3;line-height: 40px;text-indent: 12px;}
+
+div.infoPages {text-align: center;margin: 20px 0px 30px;}
+div.infoPages a{background: #ff841e;padding: 2px 5px 2px 5px;border-radius: 3px;color: #fff;display: inline-block;}
+.infoPages a.grey{color:#fff;background:#bababc}
+/*列表页样式end*/

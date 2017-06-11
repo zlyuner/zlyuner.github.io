@@ -1,0 +1,18 @@
+/*分类页面start*/
+.sortList li{min-height: 60px;border-bottom: 1px solid #d8d8d8;}
+.sortList li a{color: #666666;}
+.sortList li h3{font-size: 15px;padding: 8px 0px;height: 16px;overflow: hidden;margin: 0 30px 0 0;}
+.sortList li a p{font-size: 12px;color: #999999;padding: 5px 0 0 0;display: block;height: 14px;overflow: hidden;margin: 0 30px 0 0;}
+.sortList .icon{width: 35px;height: 35px;display: block;float: left;margin: 10px 0 0 5px;background-position: 0 -5px;}
+.sortList .arrow{background-position: 0 -5px;width: 9px;height: 17px;display: block;float: right;background-position: -430px -13px;margin: -23px 15px 0 0;}
+
+.sortList .icon2{background-position: -51px -5px;}
+.sortList .icon3{background-position: -98px -5px;}
+.sortList .icon4{background-position: -142px -5px;}
+.sortList .icon5{background-position: -186px -5px;}
+.sortList .icon6{background-position: -236px -5px;}
+.sortList .icon7{background-position: -283px -5px;}
+.sortList .icon8{background-position: -326px -5px;}
+.sortList .icon9{background-position: -374px -5px;}
+/* ------------- Retina ------------- */
+/*分类页面end*/

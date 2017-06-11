@@ -1,0 +1,85 @@
+{
+	"errno": 0,
+	"data": [
+		{
+			"img": "../images/category/shoujishuma.jpg",
+			"title": "手机数码",
+			"width":"35px",
+			"height":"40px",
+			"description": "相机配件  手机数码配件  摄像摄影...",
+			"id": "3"
+		},
+		{
+			"img": "../images/category/meirongmeizhuang.jpg",
+			"title": "美容美妆",
+			"width":"35px",
+			"height":"40px",
+			"description": "彩妆  美容护肤",
+			"id": "8"
+		},
+		{
+			"img": "../images/category/fuzhuangfushi.jpg",
+			"title": "服装服饰",
+			"width":"35px",
+			"height":"40px",
+			"description": "男装  内衣&  女装...",
+			"id": "4"
+		},
+		{
+			"img": "../images/category/xiebaopeishi.jpg",
+			"title": "鞋包配饰",
+			"width":"35px",
+			"height":"40px",
+			"description": "女包  女鞋  旅行箱包...",
+			"id": "1"
+		},
+		{
+			"img": "../images/category/meishitechan.jpg",
+			"title": "美食特产",
+			"width":"35px",
+			"height":"40px",
+			"description": "果蔬-肉类  礼品礼券  粮油速食...",
+			"id": "7"
+		},
+		{
+			"img": "../images/category/muyingtongzhuang.jpg",
+			"title": "母婴童装",
+			"width":"35px",
+			"height":"40px",
+			"description": "儿童服饰  婴儿服饰  婴儿用品...",
+			"id": ""
+		},
+		{
+			"img": "../images/category/jiajushenghuo.jpg",
+			"title": "家居生活",
+			"width":"35px",
+			"height":"40px",
+			"description": "厨房用具  园艺  家具...",
+			"id": "6"
+		},
+		{
+			"img": "../images/category/jiayongdianqi.jpg",
+			"title": "家用电器",
+			"width":"35px",
+			"height":"40px",
+			"description": "个护电器  厨卫电器  大家电...",
+			"id": ""
+		},
+		{
+			"img": "../images/category/diannaobangong.jpg",
+			"title": "电脑办公",
+			"width":"35px",
+			"height":"40px",
+			"description": "办公设备  打印耗材  文具用品...",
+			"id": ""
+		},
+		{
+			"img": "../images/category/wanleaihao.jpg",
+			"title": "玩乐爱好",
+			"width":"35px",
+			"height":"40px",
+			"description": "个性定制  乐器  宠物...",
+			"id": ""
+		}
+	]
+}
